@@ -1,0 +1,19 @@
+.stars-container {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto 0;
+
+}
+
+.rating-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating-input {
+  margin-left: 5px;
+  font-size: inherit;
+}
