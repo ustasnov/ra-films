@@ -9,17 +9,16 @@ function Stars({ count }) {
     }
   }
 
-  if (Number.isInteger(count) || count < 1 || count > 5) {
-    return ("");
-  } else {
-    const sequence = [...generatorSequence(count)];
-
+  const cnt = parseInt(count);
+  if (Number.isInteger(cnt) && cnt > 0 && cnt < 6) {
+    const sequence = [...generatorSequence(cnt)];
     return (
       <ul className="card-body-stars">
         {sequence.map((idx) => <Star key={idx} />)}
       </ul>
     );
-  }
+  } 
+  return ("");
 }
 
 export default Stars
