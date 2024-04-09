@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import Stars from "../stars/Stars";
+import { Stars } from "../stars/Stars";
 import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
 
-  const handler = ev => setCount(ev.currentTarget.value);
+  const handler = (ev: React.FormEvent<HTMLInputElement>) => setCount(parseInt(ev.currentTarget.value));
 
   return (
     <div className="stars-container">
